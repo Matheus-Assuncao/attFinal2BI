@@ -123,6 +123,10 @@ public class Inventario extends javax.swing.JFrame {
         Object[] data = {AddItem.data[0],AddItem.data[1]};
         modelo.addRow(data);
     }
+    
+    public void removeItem(){
+     ((DefaultTableModel) tabela.getModel()).removeRow(RemoveItem.selectedIndex);   
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMenu;
