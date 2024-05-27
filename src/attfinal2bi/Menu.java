@@ -117,7 +117,7 @@ public class Menu extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(250, 223, 169));
         jButton4.setFont(new java.awt.Font("Adobe Hebrew", 0, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(102, 51, 0));
-        jButton4.setText("SEI LA");
+        jButton4.setText("Add item");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,11 +203,13 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Inventario inventario = new Inventario();
+        inventario.setVisible(true);dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        AddItem tela = new AddItem();
+        tela.setVisible(true);dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
