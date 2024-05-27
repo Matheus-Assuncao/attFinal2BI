@@ -9,9 +9,12 @@ package attfinal2bi;
  * @author mathe
  */
 public class AddItem extends javax.swing.JFrame {
-
+    
     public static String name;
     public static int qtd;
+    public static Object[] data = new Object[90];
+    public static Object[] dados;
+    public static Inventario inventario = new Inventario();
     public AddItem() {
         initComponents();
     }
@@ -116,9 +119,10 @@ public class AddItem extends javax.swing.JFrame {
         name = fieldName.getText();
         String qtdString = fieldQtd.getText();
         qtd = Integer.parseInt(qtdString);
+        data[0] = name;
+        data[1] = qtd;
         fieldName.setText("");
         fieldQtd.setText("");
-        Inventario inventario = new Inventario();
         inventario.adicionaItem();
     }//GEN-LAST:event_btnEnviaActionPerformed
 
