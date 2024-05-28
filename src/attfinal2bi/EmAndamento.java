@@ -4,15 +4,14 @@
  */
 package attfinal2bi;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author mathe
  */
 public class EmAndamento extends javax.swing.JFrame {
-
-    /**
-     * Creates new form EmAndamento
-     */
+    
     public EmAndamento() {
         initComponents();
         setLocationRelativeTo(null);
@@ -43,13 +42,10 @@ public class EmAndamento extends javax.swing.JFrame {
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Cadeiras", "40", "29/05"},
-                {"Mesas", "10", "29.05"},
-                {"Toalhas", "10", "03/06"},
-                {"Mesa Madeira", "3", null}
+
             },
             new String [] {
-                "Nome", "Qtd", "Data de Entrega"
+                "Nome", "Qtd"
             }
         ));
         jScrollPane1.setViewportView(tabela);
@@ -147,6 +143,12 @@ public class EmAndamento extends javax.swing.JFrame {
                 new EmAndamento().setVisible(true);
             }
         });
+    }
+    
+    public void addItem(){
+        DefaultTableModel modelo = (DefaultTableModel) tabela.getModel();
+        Object[] data = {Pedidos.selectedItem,Pedidos.qtd};
+        modelo.addRow(data);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

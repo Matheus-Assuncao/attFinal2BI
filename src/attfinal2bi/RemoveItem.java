@@ -96,7 +96,8 @@ public class RemoveItem extends javax.swing.JFrame {
         selectedIndex = (int) spinner.getValue();
         AddItem.inventario.removeItem();
         AddItem.transferir.removeItem();
-        JOptionPane.showMessageDialog(null,"Linha removida");
+        AddItem.pedidos.removeItem();
+        JOptionPane.showMessageDialog(null,"Item removido");
     }//GEN-LAST:event_btnRemoveActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed

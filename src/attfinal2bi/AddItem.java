@@ -16,6 +16,7 @@ public class AddItem extends javax.swing.JFrame {
     public static Object[] dados;
     public static Inventario inventario = new Inventario();
     public static Transferir transferir = new Transferir();
+    public static Pedidos pedidos = new Pedidos();
     public AddItem() {
     initComponents();
     setLocationRelativeTo(null);
@@ -141,6 +142,7 @@ public class AddItem extends javax.swing.JFrame {
         fieldQtd.setText("");
         inventario.adicionaItem();
         transferir.addItem();
+        pedidos.addItem();
     }//GEN-LAST:event_btnEnviaActionPerformed
 
     /**
