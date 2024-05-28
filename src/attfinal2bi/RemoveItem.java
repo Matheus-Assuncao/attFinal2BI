@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package attfinal2bi;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author matheus.asassuncao
@@ -13,6 +13,7 @@ public class RemoveItem extends javax.swing.JFrame {
     public static int selectedIndex;
     public RemoveItem() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -28,6 +29,7 @@ public class RemoveItem extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnRemove = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,6 +49,8 @@ public class RemoveItem extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("Primeira linha = 0");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -54,9 +58,11 @@ public class RemoveItem extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(222, 222, 222)
                 .addComponent(spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addContainerGap(102, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(184, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -73,7 +79,9 @@ public class RemoveItem extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(btnRemove)
                 .addGap(46, 46, 46)
@@ -87,11 +95,12 @@ public class RemoveItem extends javax.swing.JFrame {
     private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
         selectedIndex = (int) spinner.getValue();
         AddItem.inventario.removeItem();
+        JOptionPane.showMessageDialog(null,"Linha removida");
     }//GEN-LAST:event_btnRemoveActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Menu tela = new Menu();
-        tela.setVisible(true);
+        tela.setVisible(true);dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
@@ -133,6 +142,7 @@ public class RemoveItem extends javax.swing.JFrame {
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSpinner spinner;
     // End of variables declaration//GEN-END:variables
 }

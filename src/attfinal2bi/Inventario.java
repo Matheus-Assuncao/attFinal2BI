@@ -17,6 +17,7 @@ public class Inventario extends javax.swing.JFrame {
      */
     public Inventario() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -125,7 +126,7 @@ public class Inventario extends javax.swing.JFrame {
     }
     
     public void removeItem(){
-     ((DefaultTableModel) tabela.getModel()).removeRow(RemoveItem.selectedIndex);   
+     ((DefaultTableModel) tabela.getModel()).removeRow(RemoveItem.selectedIndex); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
