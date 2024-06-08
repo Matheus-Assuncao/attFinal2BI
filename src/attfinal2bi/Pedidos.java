@@ -14,6 +14,7 @@ public class Pedidos extends javax.swing.JFrame {
     public static String selectedItem;
     public static int qtd;
     public static EmAndamento emAndamento = new EmAndamento();
+    public static RemovePedidos removePedidos = new RemovePedidos();
     
     public Pedidos() {
         initComponents();
@@ -137,7 +138,7 @@ public class Pedidos extends javax.swing.JFrame {
     String qtdString = fieldQtd.getText();
     qtd = Integer.parseInt(qtdString);
     emAndamento.addItem();
-    JOptionPane.showMessageDialog(null,"Pedido concluido!");
+    removePedidos.addItem();
     JOptionPane.showMessageDialog(null,"Pedido disponivel na tela EM ANDAMENTO");
     fieldQtd.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed

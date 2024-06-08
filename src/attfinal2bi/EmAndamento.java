@@ -150,6 +150,10 @@ public class EmAndamento extends javax.swing.JFrame {
         Object[] data = {Pedidos.selectedItem,Pedidos.qtd};
         modelo.addRow(data);
     }
+    
+    public void removeItem(){
+        ((DefaultTableModel) tabela.getModel()).removeRow(RemovePedidos.selectedIndex); 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
