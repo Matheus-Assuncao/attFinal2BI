@@ -176,6 +176,7 @@ public class AddItem extends javax.swing.JFrame {
         inventario.adicionaItem();
         transferir.addItem();
         pedidos.addItem();
+        JOptionPane.showMessageDialog(null,"ADICIONADO!");
     }//GEN-LAST:event_btnEnviaActionPerformed
 
     private void fieldQtdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldQtdActionPerformed
